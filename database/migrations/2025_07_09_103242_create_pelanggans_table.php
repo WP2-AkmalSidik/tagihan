@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('no_telepon', 15);
             $table->foreignId('tarif_id')->constrained('tarifs')->onDelete('cascade');
-            $table->decimal('daya', 5, 2);
+            $table->decimal('daya', 8, 2);
             $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
